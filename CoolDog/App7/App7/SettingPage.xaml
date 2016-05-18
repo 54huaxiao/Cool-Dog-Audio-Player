@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="App7.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App7"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel Padding="10, 10, 10, 10" Width="350">
+                <TextBlock Text="设置头像"/>
+                <Image x:Name="image"  Height="180" Stretch="UniformToFill"/>
+                <RelativePanel>
+                    <AppBarButton x:Name="SelectPictureButton" Click="SelectPictureButton_Click" Icon="Pictures" Label="select"/>
+                </RelativePanel>
+                <TextBlock Text="设置基本信息"/>
+                <TextBox x:Name="account" Header="Account" Margin="0,12,0,0" IsEnabled="False"/>
+                <TextBox x:Name="nickname" Header="Nickname" Margin="0,12,0,0"/>
+                <RelativePanel>
+                    <RadioButton x:Name="male" Content="male" />
+                    <RadioButton x:Name="female" Content="female"  RelativePanel.AlignRightWithPanel="True"/>
+                </RelativePanel>
+                <TextBox x:Name="email" Header="Email" Margin="0,12,0,0"/>
+                <TextBox x:Name="phone" Header="Phone" Margin="0,12,0,0"/>
+                <TextBox x:Name="qq" Header="QQ" Margin="0,12,0,0"/>
+                <TextBox x:Name="wechat" Header="wechat" Margin="0,12,0,0"/>
+                <RelativePanel Margin="0,24,0,0">
+                    <Button x:Name="settingBtn" Content="Confirm" Click="settingBtn_Click"></Button>
+                </RelativePanel>
+                <TextBlock Text="修改密码"/>
+                <PasswordBox x:Name="password"/>
+                <PasswordBox x:Name="password_confirm"/>
+                <Button x:Name="setPasswordBtn" Click="setPasswordBtn_Click" Content="OK"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
